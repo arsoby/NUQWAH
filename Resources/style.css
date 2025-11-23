@@ -1,0 +1,54 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root{
+  :root{
+    --width-of-mobile:360px;
+    --width-of-tablet:1024px;
+    --width-of-desktop:1920px;
+  }
+}
+
+body {
+  overflow-y: hidden;
+}
+
+figure img {
+  position: absolute;
+  width: 273px;
+  height: 125px;
+  /* العنصر خارج الشاشة بشكل ديناميكي */
+  top: calc(-100vh - 125px);
+}
+
+/* للشاشات الصغيرة */
+@media (max-width: 360px) {
+  body {
+    height: 100vh;
+    width: var(--width-of-mobile);
+    background-color: red;
+  }
+
+}
+
+/* للأجهزة اللوحية */
+@media (min-width: 361px) and (max-width: 768px) {
+  body {
+    width: var(--width-of-tablet);
+    height: 100vh;
+    background-color: blue;
+  }
+
+}
+
+/* للشاشات الكبيرة */
+@media (min-width: 769px) {
+  body {
+    width: var(--width-of-desktop);
+    height: 100vh;
+    background-color: green;
+  }
+}
