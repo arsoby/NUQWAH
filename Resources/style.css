@@ -1,54 +1,151 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-:root{
-  :root{
-    --width-of-mobile:360px;
-    --width-of-tablet:1024px;
-    --width-of-desktop:1920px;
-  }
+:root {
+}
+/* Import Google font  */
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap');
+
+.container {
+  margin: 0 10%;
 }
 
 body {
-  overflow-y: hidden;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,
 }
 
-figure img {
-  position: absolute;
-  width: 273px;
-  height: 125px;
-  /* العنصر خارج الشاشة بشكل ديناميكي */
-  top: calc(-100vh - 125px);
+/* Spacial Rules */
+
+main {
+  background-color: #d5b9b2;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  perspective-origin: center center;
+  perspective: 600px;
+  scroll-behavior: smooth;
+}
+.quick-step-guide {
+  color: #462a40;
+  padding-top: 15px;
+  text-align: center;
+  font-family: "Almarai", sans-serif;
+}
+.quick-step-guide h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+p {
+  line-height: 175%;
+  font-weight: 400;
+  font-size: 1.25rem;
 }
 
-/* للشاشات الصغيرة */
+img.logo {
+  visibility: hidden;
+  width: 54.77px;
+  height: 25px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+}
+
+/* Mobile Screen */
 @media (max-width: 360px) {
   body {
     height: 100vh;
-    width: var(--width-of-mobile);
-    background-color: red;
   }
-
+  img.logo {
+    width: calc(54.77px*2.5);
+    height: calc(25px*2.5);
+    animation: logo 4.5s ease-out 0.5s;
+  }
+  .quick-step-guide {
+    & h2 {
+      animation: quote 5.1s ease-in;
+    }
+    & p {
+      animation: quote 5.5s ease-in;
+    }
+  }
 }
 
-/* للأجهزة اللوحية */
+/* Tablet Screen */
 @media (min-width: 361px) and (max-width: 768px) {
   body {
-    width: var(--width-of-tablet);
     height: 100vh;
-    background-color: blue;
   }
-
+  img.logo {
+    width: calc(54.77px*3);
+    height: calc(25px*3);
+    animation: logo 4.5s ease-out 0.5s;
+  }
+  .quick-step-guide {
+    & h2 {
+      animation: quote 5.1s ease-in;
+    }
+    & p {
+      animation: quote 5.5s ease-in;
+    }
+  }
 }
+/* When you set the animation time , you should ensure to quality the total of logo and h2
 
-/* للشاشات الكبيرة */
+/* Desktop Screen */
 @media (min-width: 769px) {
   body {
-    width: var(--width-of-desktop);
     height: 100vh;
-    background-color: green;
+  }
+  img.logo {
+    width: calc(54.77px*6);
+    height: calc(25px*6);
+    animation: logo 4.5s ease-out 0.5s;
+  }
+  .quick-step-guide {
+    & h2 {
+      animation: quote 5.1s ease-in;
+    }
+    & p {
+      animation: quote 5.5s ease-in;
+    }
+  }
+}
+
+@keyframes logo {
+  0% {
+    visibility: visible;
+    /* backdrop-filter: blur(10px); */
+    transform: translate3d(-50%, 800%, 0px);
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 0.7;
+    /* backdrop-filter: blur(30px); */
+    transform: translate3d(-50%, -50%, 0px);
+  }
+  50% {
+    transform: translate3d(-50%, -75%, 0px);
+    /* backdrop-filter: blur(0); */
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 600px);
+  }
+}
+
+@keyframes quote {
+  0% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+    /* color: white; */
+  }
+  100% {
+    /* backdrop-filter: blur(20px); */
+    opacity: 1;
   }
 }
