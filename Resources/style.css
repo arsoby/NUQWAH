@@ -6,14 +6,14 @@
 :root {
 }
 /* Import Google font  */
-@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap");
 
 .container {
   margin: 0 10%;
 }
 
 body {
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,
+  font-family: "Almarai", sans-serif;
 }
 
 /* Spacial Rules */
@@ -31,7 +31,6 @@ main {
   color: #462a40;
   padding-top: 15px;
   text-align: center;
-  font-family: "Almarai", sans-serif;
 }
 .quick-step-guide h2 {
   font-size: 2rem;
@@ -53,23 +52,74 @@ img.logo {
   transform-origin: center center;
 }
 
+/* Footer Styles  */
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 15px;
+  background: hsl(12, 29%, 90%);
+}
+footer nav {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+footer a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  row-gap: 3px;
+  height: 100%;
+
+  & span {
+    color: hsl(313, 25%, 30%);
+  }
+}
+footer a:hover {
+  & svg,
+  svg path.w-circle,
+  svg path.w-logo,
+  & span {
+    fill: black;
+    color: black;
+  }
+}
+footer nav svg,
+path.w-circle,
+svg path.w-logo {
+  width: 25px;
+  height: 25px;
+  fill: hsl(313, 25%, 30%);
+}
+
+/* When you set the animation time , you should ensure to quality the total of logo and h2 in All Media Queries */
 /* Mobile Screen */
 @media (max-width: 360px) {
   body {
     height: 100vh;
   }
   img.logo {
-    width: calc(54.77px*2.5);
-    height: calc(25px*2.5);
+    width: calc(54.77px * 2.5);
+    height: calc(25px * 2.5);
     animation: logo 4.5s ease-out 0.5s;
   }
   .quick-step-guide {
     & h2 {
+      font-size: 24px;
       animation: quote 5.1s ease-in;
     }
     & p {
       animation: quote 5.5s ease-in;
     }
+  }
+  footer {
+    animation: quote 8s ease-in;
   }
 }
 
@@ -79,8 +129,8 @@ img.logo {
     height: 100vh;
   }
   img.logo {
-    width: calc(54.77px*3);
-    height: calc(25px*3);
+    width: calc(54.77px * 3);
+    height: calc(25px * 3);
     animation: logo 4.5s ease-out 0.5s;
   }
   .quick-step-guide {
@@ -89,10 +139,25 @@ img.logo {
     }
     & p {
       animation: quote 5.5s ease-in;
+      font-size: 24px;
+    }
+  }
+  footer {
+    animation: quote 10s ease-in;
+    & h3 {
+      font-size: 24px;
+    }
+    & nav svg,
+    & path.w-circle,
+    & svg path.w-logo {
+      width: 32px;
+      height: 32px;
+    }
+    & a span{
+      font-size:20px ;
     }
   }
 }
-/* When you set the animation time , you should ensure to quality the total of logo and h2
 
 /* Desktop Screen */
 @media (min-width: 769px) {
@@ -100,8 +165,8 @@ img.logo {
     height: 100vh;
   }
   img.logo {
-    width: calc(54.77px*6);
-    height: calc(25px*6);
+    width: calc(54.77px * 6);
+    height: calc(25px * 6);
     animation: logo 4.5s ease-out 0.5s;
   }
   .quick-step-guide {
@@ -110,6 +175,22 @@ img.logo {
     }
     & p {
       animation: quote 5.5s ease-in;
+      font-size: 28px;
+    }
+  }
+  footer {
+    animation: quote 10s ease-in;
+    & h3 {
+      font-size: 28px;
+    }
+    & nav svg,
+    & path.w-circle,
+    & svg path.w-logo {
+      width: 40px;
+      height: 40px;
+    }
+    & a span{
+      font-size:24px ;
     }
   }
 }
