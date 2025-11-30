@@ -3,10 +3,6 @@
   margin: 0;
   padding: 0;
 }
-:root {
-}
-/* Import Google font  */
-@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap");
 
 .container {
   margin: 0 10%;
@@ -24,7 +20,7 @@ main {
   overflow: hidden;
   height: 100vh;
   perspective-origin: center center;
-  perspective: 600px;
+  perspective: 400px;
   scroll-behavior: smooth;
 }
 .quick-step-guide {
@@ -58,7 +54,7 @@ footer {
   bottom: 0px;
   width: 100%;
   text-align: center;
-  padding-bottom: 15px;
+  padding-bottom: 60px;
   background: hsl(12, 29%, 90%);
 }
 footer nav {
@@ -107,19 +103,19 @@ svg path.w-logo {
   img.logo {
     width: calc(54.77px * 2.5);
     height: calc(25px * 2.5);
-    animation: logo 4.5s ease-out 0.5s;
+    animation: logo 4s ease-in 0.5s;
   }
   .quick-step-guide {
     & h2 {
       font-size: 24px;
-      animation: quote 5.1s ease-in;
+      animation: quote 4.6s ease-in;
     }
     & p {
-      animation: quote 5.5s ease-in;
+      animation: quote 5s ease-in;
     }
   }
   footer {
-    animation: quote 8s ease-in;
+    animation: quote 10s ease-in;
   }
 }
 
@@ -131,14 +127,14 @@ svg path.w-logo {
   img.logo {
     width: calc(54.77px * 3);
     height: calc(25px * 3);
-    animation: logo 4.5s ease-out 0.5s;
+    animation: logo 4s ease-out 0.5s;
   }
   .quick-step-guide {
     & h2 {
-      animation: quote 5.1s ease-in;
+      animation: quote 4.6s ease-in;
     }
     & p {
-      animation: quote 5.5s ease-in;
+      animation: quote 5s ease-in;
       font-size: 24px;
     }
   }
@@ -167,14 +163,14 @@ svg path.w-logo {
   img.logo {
     width: calc(54.77px * 6);
     height: calc(25px * 6);
-    animation: logo 4.5s ease-out 0.5s;
+    animation: logo 4s ease-out 0.5s;
   }
   .quick-step-guide {
     & h2 {
-      animation: quote 5.1s ease-in;
+      animation: quote 4.6s ease-in;
     }
     & p {
-      animation: quote 5.5s ease-in;
+      animation: quote 5s ease-in;
       font-size: 28px;
     }
   }
@@ -205,15 +201,15 @@ svg path.w-logo {
   30% {
     opacity: 0.7;
     /* backdrop-filter: blur(30px); */
-    transform: translate3d(-50%, -50%, 0px);
+    transform: translate3d(-50%, -75%, 50px);
   }
   50% {
-    transform: translate3d(-50%, -75%, 0px);
+    transform: translate3d(-50%, -50%, 0px);
     /* backdrop-filter: blur(0); */
     opacity: 1;
   }
   100% {
-    transform: translate3d(-50%, -50%, 600px);
+    transform: translate3d(-50%, -50%, 400px);
   }
 }
 
