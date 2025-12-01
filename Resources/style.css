@@ -63,6 +63,9 @@ footer nav {
   justify-content: center;
   column-gap: 30px;
 }
+footer h3{
+  font-size: 15px;
+}
 
 footer a {
   display: flex;
@@ -117,6 +120,9 @@ svg path.w-logo {
   footer {
     animation: quote 10s ease-in;
   }
+  nav a span{
+    font-size: 15px
+  };
 }
 
 /* Tablet Screen */
@@ -149,8 +155,8 @@ svg path.w-logo {
       width: 32px;
       height: 32px;
     }
-    & a span{
-      font-size:20px ;
+    & a span,& h3{
+      font-size:19px ;
     }
   }
 }
@@ -185,7 +191,7 @@ svg path.w-logo {
       width: 40px;
       height: 40px;
     }
-    & a span{
+    & a span,& h3{
       font-size:24px ;
     }
   }
